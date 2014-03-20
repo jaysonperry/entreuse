@@ -1,0 +1,681 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic);
+
+//helvetica_neueregular
+@font-face {
+    font-family: 'helveticaneue-ultraligcond';
+    src: url('helveticaneue-ultraligcond-webfont.eot');
+    src: url('helveticaneue-ultraligcond-webfont.eot?#iefix') format('embedded-opentype'),
+         url('helveticaneue-ultraligcond-webfont.woff') format('woff'),
+         url('helveticaneue-ultraligcond-webfont.ttf') format('truetype'),
+         url('helveticaneue-ultraligcond-webfont.svg#helvetica_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+//helvetica_neueregular
+@font-face {
+    font-family: 'helveticaneue-ultraligcondobl';
+    src: url('helveticaneue-ultraligcondobl-webfont.eot');
+    src: url('helveticaneue-ultraligcondobl-webfont.eot?#iefix') format('embedded-opentype'),
+         url('helveticaneue-ultraligcondobl-webfont.woff') format('woff'),
+         url('helveticaneue-ultraligcondobl-webfont.ttf') format('truetype'),
+         url('helveticaneue-ultraligcondobl-webfont.svg#helvetica_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+// Entreuse Application Custom Styling based on Bootstrap-sass
+//
+
+@import "entreuse_simple_form";
+
+@import "bootstrap_dropdowns";
+// Custom SASS CSS
+// Custom Site SASS Variables
+
+$blue-logo-color:  rgba( 0, 86, 132, 1 ); // #005684
+$green-logo-color: rgba( 40, 185, 154, 1 ); // #28b99a
+$green-darker-logo-color: rgba( 30, 132, 108, 1 ); // #1e846c
+$red-entreuse-color: rgba( 205, 0, 33, 1 ); // #cd0021
+$grey-twenty-percent: rgba( 207, 207, 207, 1 ); // #cfcfcf
+$grey-forty-percent: rgba( 172, 172, 172, 1 ); // #acacac
+$grey-sixty-percent: rgba( 125, 125, 125, 1 ); // #7d7d7d
+$grey-seventyfive-percent: rgba( 85, 85, 85, 1 ); // #7d7d7d
+$grey-border-color: rgba(199, 200, 202, 1);
+$white: rgba( 255, 255, 255, 1 ); // #ffffff
+$black: rgba( 0, 0, 0, 1 ); // #000000
+
+$shadow-hard: 1px 1px 0 $grey-forty-percent;
+$shadow-soft: 2px 2px 2px $grey-forty-percent;
+
+$text-light-logo-blue: rgba( 213, 221, 230, 1 ); // #d5dde6
+
+$border-thick-line: 3px solid;
+$border-thin-line: 1px solid;
+
+$golden-ratio-long: 62.8%;
+$golden-ratio-short: 38.2%;
+
+$padding-none: 0px;
+$padding-sm: 8px;
+$padding-md: 16px;
+$padding-lg: 32px;
+
+$margin-none: 0px;
+$margin-sm: 8px;
+$margin-md: 16px;
+$margin-lg: 32px;
+
+// Bootstrap Direct Hacks
+$brand-primary: $grey-seventyfive-percent;
+$border-radius-base: 6px;
+$body-bg: rgba( 44, 62, 88, 1 ); // #2c3e50
+$text-color: #262626;
+// basic typography
+$font-family-entreuse-brand: "helveticaneue-ultraligcond", Helvetica, sans-serif;
+$font-family-sans-serif: "Source Sans Pro" Arial, Helvetica, sans-serif;
+$font-family-serif: Georgia, "Times New Roman", Times, serif;
+$font-family-monospace: "Lucida Console", Monaco, monospace;
+$font-size-base: 14px;/* link blue #3366BB rgba(51,102,187,1)*/
+
+// Media queries breakpoints
+// Define the breakpoints at which your layout will change, adapting to different screen sizes.
+$screen-xs: 480px;
+$screen-xs-min: $screen-xs;
+$screen-phone: $screen-xs-min;
+
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+$screen-tablet: $screen-sm-min;
+$screen-md: 992px;
+$screen-md-min: $screen-md;
+$screen-desktop: $screen-md-min;
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
+$screen-lg-desktop: $screen-lg-min;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+
+@media (max-width: $screen-xs-max) {
+    body {
+        font-size: 10px !important;
+        
+        .pitch {
+            font-size: 3em !important;
+        }
+    }
+    
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    body {
+        font-size: 12px !important;
+        
+        .pitch {
+            font-size: 4em !important;
+        }
+    }
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    body {
+        font-size: 14px !important;
+        
+        .pitch {
+            font-size: 6em !important;
+        }
+
+    }
+}
+@media (min-width: $screen-lg-min) {
+    body {
+        font-size: 14px !important;
+        
+        .pitch {
+            font-size: 8em !important;
+        }
+
+    }
+}
+
+
+// Grid
+  // Padding between columns. Gets divided in half for the left and right.
+
+$gridColumns: 12; 
+$gridGutterWidth: 10px;
+  //Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint: $screen-sm-min; 
+  // Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
+
+
+// Navigation Bar and other links
+
+
+$navbar-default-link-color: #005684;
+
+
+
+// Buttons
+
+$btn-default-bg: rgba( 255, 255, 255, 1 );
+$btn-default-border: $brand-primary;
+$btn-link-disabled-color: rgba( 0, 0, 0, .25 );
+
+
+// Containers
+$jumbotron-padding: 2em;
+$jumbotron-bg: rgba( 236, 240, 241, 1 );
+
+// Panels and Wells
+$panel-bg: rgba( 236, 240, 241, 1 );
+$panel-inner-border: rgba( 236, 240, 241, 1 );
+  // Border color for elements within panels
+$panel-border-radius: $border-radius-base;
+$panel-footer-bg: rgba( 0, 86, 132, .15 );
+  // For Panel Default State
+$panel-default-text: rgba( 50, 50, 50, 1 );
+$panel-default-border: rgba( 50, 50, 50, 1 );
+$panel-default-heading-bg: rgba( 0, 86, 132, .25 ); 
+$panel-footer-bg: rgba( 0, 86, 132, .25 );
+
+  // Wells
+$well-bg: rgba( 0, 86, 132, 0 );
+// bootstrap-sass includes
+// +all custom hacks to bootstrapp CSS above here
+
+  @import "bootstrap";
+
+
+// Mixins
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}  // .box { @include border-radius(10px); }
+
+// @import 'bootstrap-responsive';
+
+body {
+  padding-top: 64px;
+  background-color: $grey-twenty-percent;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #EFEFEF),
+    color-stop(1, #FFFFFF)
+  );
+  background-image: -o-linear-gradient(bottom, #EFEFEF 0%, #FFFFFF 100%);
+  background-image: -moz-linear-gradient(bottom, #EFEFEF 0%, #FFFFFF 100%);
+  background-image: -webkit-linear-gradient(bottom, #EFEFEF 0%, #FFFFFF 100%);
+  background-image: -ms-linear-gradient(bottom, #EFEFEF 0%, #FFFFFF 100%);
+  background-image: linear-gradient(to bottom, #EFEFEF 0%, #FFFFFF 100%);
+} 
+  //end body
+  
+  // Typography
+  
+  .navbar-brand-font {
+    font-family: $font-family-entreuse-brand;
+    font-size: 36px;
+  }
+  
+  .text-grey-light {
+    color: $grey-forty-percent;
+  }
+  
+    // Headings
+    
+    .rubric {
+      font-family: $font-family-entreuse-brand;
+      line-height: 1.125em;
+      font-weight: bolder;
+      color: $blue-logo-color;
+      
+      &.rubric-sm {
+      font-size: .1em;
+      text-transform: capitalize;
+      }
+      
+      &.rubric-lg {
+      font-size: 2em;
+      }
+      
+      &.rubric-upper {
+      text-transform: uppercase;
+      }
+    }
+
+// Panels
+
+.content-panel {
+      @include border-radius(0px);
+      background: $white;
+      padding: 6px;
+      margin: 0;
+    }
+    
+    .inner-content-panel {
+      margin: 0;
+      border: 1px solid $grey-border-color;
+    }
+
+ 
+  // Images
+  img.image-sm {
+    max-width:  25%;
+    max-height: 25%;
+  }
+  
+  img.image-xsm {
+    max-width:  16%;
+    max-height: 16%;
+  }
+  
+  img.image-md {
+    max-width:  $golden-ratio-long;
+    max-height: auto;
+  }
+  
+  img.img-center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  img.img-margin {
+    display: block;
+    margin-right: 1em;
+  }
+  
+  img.img-styling-basic {
+    border: $grey-border-color solid 1px;
+    box-shadow: $shadow-hard;
+    border-radius: 6px;
+  }
+  
+  // Home Page Sections
+  // Billboard
+  #billboard {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 32px;
+      
+    .home-slate {
+      padding-top: .5em;
+      text-align: center;
+      
+      h1 {
+      font-size: 3.875em;
+      font-weight: bolder;
+      color: $blue-logo-color;
+      text-transform: none;
+      font-style: italic;
+      }
+      
+      h2 {
+      font-weight: normal;
+      font-style: italic;
+      color: $green-darker-logo-color;
+      text-shadow:$shadow-hard;
+      padding-top: 28px;
+      padding-bottom: 28px;
+      }
+      
+      h3 {
+      font-size: 2em;
+      color: $grey-forty-percent;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      }
+      
+    }
+  }
+
+  #fold {
+    
+    padding: 0;
+    font-size: 1.25em;
+    
+    
+    
+    #offering {
+      
+      #headingOffering {
+        padding: 2em 4em;
+        text-align: center;
+      }
+      
+      h3 {
+        font-size: 2.25em;
+        font-weight: bolder;
+        color: $blue-logo-color;
+        /*text-shadow: .0625em .0625em 0 #000000*/
+      }
+      
+    }
+    
+  // Benefits-Article
+    
+    #benefits {
+      padding: 2em 4em;
+      
+      .row {
+        
+        margin-top: 1em;
+        padding-top: 1em;
+      }
+      
+      .benefits-article {
+        text-align: left;
+        line-height: 1.1875 !important;
+        display: block;
+        
+        margin-top: 1em;
+        padding-top: 1em;
+      
+      }
+    }
+    // Home Page About Section
+  
+
+  
+    #about {
+      padding: 1.5em;
+    
+      .row {
+        margin-bottom: 2em;
+      }
+      
+      .founder {
+        display: block;
+        text-align: left;
+      
+        p {
+          margin: 0;
+        }
+      }
+      
+      .name-hilite {
+        font-size: 1.125em;
+        color: $blue_logo_color; 
+        font-style: italic;
+        
+      }
+    }
+    
+    
+    // Home Page Badges Section
+    #badges {
+      background-color: rgba( 0, 0, 0, .05 ); // 
+      @include border-radius(0px);
+      padding: 1.5em;
+    }
+  }
+ 
+  
+    // Footer
+  .footer-site {
+    color: $blue-logo-color;
+    font-size: .625em;
+  
+  
+    a {
+      color: $blue-logo-color !important;
+      text-decoration: underline;
+    }
+    
+    a:hover {
+      text-decoration: none;
+      background-color: transparent;
+    }
+  
+  }
+  
+  // end #billboard
+  
+  #demos {
+    
+    .epk {
+      padding: 18px 6px;
+      
+      .panel {
+        @include border-radius(0px);
+        background: $white;
+        padding: 6px;
+        margin: 0;
+        
+        .epk-content {
+            margin: 0;
+            border: 1px solid $grey-border-color;
+          
+          .shout-panel {
+            background-color: $grey-border-color;
+            color: $white;
+            display: block;
+            padding: 18px;
+            margin: 0;
+            text-align: center;
+          }
+          
+          .epk-locker-display {
+            margin: 0;
+            padding: 0 18px;
+            border-right: 1px solid $grey-border-color;
+            
+            
+          }
+          
+          .epk-heading {
+            margin: 0 -18px;
+            padding: 18px;
+            border-bottom: 1px solid $grey-border-color;
+            
+            h2 {
+              line-height: .75em !important;
+            }
+            
+            p {
+              
+            }
+            
+          }
+          
+          .rackmount {
+            margin: auto 6px;
+            padding: 0 18px;
+          }
+        }
+      }
+    }
+  }
+  
+  // end #demo
+  
+  #dashboard {
+    h1 {
+        color: $text-color;
+      }
+    
+    .panel {
+      background: none;
+      
+      .panel-heading {
+      background: none;
+        
+      }
+      .lead {
+        
+        .rubric {
+          color: $green-logo-color;
+          
+        }
+        .header {
+          
+        }
+        .blurb {
+          
+        }
+      }
+    .panel-footer {
+      position: relative;
+      
+      .panel-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        min-width: 100%;
+        min-height: 100%;
+        background-color: rgba( 0, 0, 0, .5)
+      }
+      h2 {
+        position: absolute;
+        top: 16px;
+        left: 32px;
+        z-index: 2;
+        color: $white;
+      }
+    }
+      
+      .asset-box {
+        border-left:  $border-thin-line $grey-forty-percent;
+      }
+      
+      .coming-soon {
+        padding-top: 48px;
+        .panel {
+          background: none;
+          .panel-body {
+             
+            &.panel-1 {
+              background-color: #f00;
+            }
+            &.panel-2 {
+              background-color: #0f0;
+              
+            } 
+            &.panel-3 {
+              background-color: #00f;
+              
+            }
+            &.panel-4 {
+              background-color: #f0f;
+              
+            }  
+          
+          }
+        }
+      }
+    }
+  }
+  
+  // end #demo
+  
+    // Forms
+  
+  .form-group {
+    font-size: .75em;
+  }
+  
+  .form-field-inline {
+    display: inline;
+    max-width: 65%;
+  }
+  
+  .submit-inline {
+    max-width: 15%;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"],
+  .form-group input[type="label"] {
+    font-size: 12px;
+    height: auto;
+    margin-bottom: 0px;
+    padding: 5px 6px;
+  }
+  
+  // Buttons
+
+.btn-default {
+  background-color: rgba(255,255,255,1);
+  color: rgba(0,0,0,.9);
+  // border: $border-thin-line $blue-logo-color;
+  box-shadow: $shadow-soft;
+}
+.btn-basic {
+  background-color: rgba(255,255,255,1);
+  color: rgba(0,0,0,.9);
+  border: $border-thin-line $blue-logo-color;
+  box-shadow: $shadow-soft;
+}
+  .request-registration-code {
+  font-size: .8125em;
+  }
+  
+  // Dividers
+  
+  .div-border-thick-full {
+    border-top: $border-thick-line $grey-border-color;
+    min-width: 100%;
+    display: block;
+    margin: 1em auto;
+  }
+  
+  .div-border-thick-ratio {
+    border-top: $border-thick-line $grey-border-color;
+    max-width: $golden-ratio-long;
+    display: block;
+    margin: 1em auto;
+  }
+  
+  .div-border-thin-full {
+    border-top: $border-thin-line $grey-border-color;
+    min-width: 100%;
+    display: block;
+    margin: 1em auto;
+  }
+  
+  .div-border-thin-ratio {
+    border-top: $border-thin-line $grey-border-color;
+    max-width: $golden-ratio-long;
+    display: block;
+    margin: 1em auto;
+  }
+
+// Navigation & Link Default Resets
+  // Nav-bar
+  .navbar {
+    @include border-radius(0px);
+  }
+
+  .navbar-brand {
+    font-weight: bolder;
+  }
+
+// Box, Wraps & Containers 
+  .section-box {
+    margin: 2em 0 0 0;
+    padding: 2em;
+    @include border-radius(.25em);
+    box-shadow: $shadow-hard;
+    border:  #333 1px solid;
+  }
+    
+  .panel-narrow {
+  width: $golden-ratio-long;
+  }
+  
+  .panel-center {
+    margin: 0 auto;
+  }
+ 
