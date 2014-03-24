@@ -1,28 +1,25 @@
-#billboard
-  
-  .row
+#lobby
+  #billboard
     
-    .home-slate
-
-      = image_tag "entreuse-logo-typographic.png", :class => "img-center image-md img-responsive", :title => "Entreuse EPK Logo Graphic"
-
-      %h2.pitch Tell Your Story
-    
-      = link_to 'Sign up for Beta', faq_path, :class => "btn btn-default btn-md"
+    .row
       
-      
-      
-    -# end left col
-
-#fold
+      .home-slate
   
-  %div
-    .div-border-thin-full
-    = render 'fold'
-    .div-border-thin-full
-    #about
-      = render 'about'
-    .div-border-thin-full
-    #badges
-      = render 'badges'
+        = image_tag "entreuse-logo-typographic.png", :class => "img-center image-md img-responsive", :title => "Entreuse EPK Logo Graphic"
+  
+        %h2.pitch Tell Your Story
+      
+        = link_to 'Sign up for Beta', "http://eepurl.com/Mo6gb", :class => "btn btn-default btn-md", :target => "_blank"
+  
+  #fold
+    
+    %div
+      .div-border-thin-full
+      = render 'fold'
+      .div-border-thin-full
+      #about
+        = render 'about'
+      .div-border-thin-full
+      #badges
+        = render 'badges'
 
