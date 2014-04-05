@@ -1,0 +1,70 @@
+<div id="demos">
+  <div class="epk">
+    <div class="panel">
+      <div class="epk-content">
+        <div id="shout" class="panel shout-panel">
+          <h1>DEMO - Electronic Media Kit (EMK)</h1>
+        </div>
+        <!-- begin main epk content -->
+        <div class="row">
+          <div class="col-xsm-12 col-sm-12 col-md-9 col-lg-9 col-xlg-9">
+            <article class="epk-locker-display">
+              <div class="epk-heading">
+                <div class="row">
+                  <%= render ('demo_parts/deanorion/orion_cover') %>
+                </div>
+              </div>
+              <div class="row epk-display-row">
+                
+                <div id="theIt" class="col-xsm-12 col-sm-6 col-md-6 col-lg-6 col-xlg-6">
+                  <%= render ('demo_parts/deanorion/orion_book_sum') %>
+                
+                </div>
+                <div id="theWho" class="col-xsm-12 col-sm-6 col-md-6 col-lg-6 col-xlg-6">
+                  <%= render ('demo_parts/deanorion/orion_book_reviews') %>
+                </div>
+                
+              </div>
+              <div class="row epk-display-row">
+                
+                <div id="theInfo" class="col-xsm-12 col-sm-6 col-md-6 col-lg-6 col-xlg-6">
+                  <%= render ('demo_parts/deanorion/orion_book_sum') %>
+                
+                </div>
+                <div id="theComments" class="col-xsm-12 col-sm-6 col-md-6 col-lg-6 col-xlg-6">
+                  <%= render ('demo_parts/deanorion/orion_readers_com') %>
+                </div>
+              </div>  
+                
+              <div class="row epk-display-row">  
+                <div id="theQuestions" class="col-xsm-12 col-sm-6 col-md-6 col-lg-6 col-xlg-6">
+                  <%= render ('demo_parts/deanorion/orion_interview_qa') %>
+                </div>
+                
+              </div>
+            </article><!-- end .epk-wrapper -->
+          </div>
+          
+          <div class="col-xsm-12 col-sm-12 col-md-3 col-lg-3 col-xlg-3">
+            <section class="rackmount">
+              <div id="welcome">
+                <h3 class="rubric">Welcome</h3>
+              </div>
+              <div class="socal-media-bar">
+                <ul>
+                  <li><%= link_to ' ', "http://www.thewritergene.com/blog", :class => "fa fa-star", :target => "_blank" %>
+                  </li>
+                  <li>
+                      <%= link_to ' ', "https://www.linkedin.com/pub/dean-orion/0/613/b96", :class => "fa fa-linkedin-square", :target => "_blank" %>
+                  </li>
+                  
+                </ul>
+              </div>
+              <%= render ('demo_parts/deanorion/orion_bio') %>
+            </section><!-- end .rackmount -->
+          </div>
+        </div>
+        </div><!-- end .epk-content -->
+    </div><!-- end .epk-wrapper -->
+  </div><!-- end .epk -->
+</div><!-- end #demos -->

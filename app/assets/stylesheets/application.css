@@ -11,5 +11,6 @@
  *= require_self
  *= require_entreuse-bs
  *= require_lobby
+ *= require font-awesome
  *= require_tree .
  */

@@ -15,7 +15,7 @@ $blue-logo-color:  rgba( 0, 86, 132, 1 ); // #005684
 $green-logo-color: rgba( 40, 185, 154, 1 ); // #28b99a
 $green-darker-logo-color: rgba( 30, 132, 108, 1 ); // #1e846c
 $red-entreuse-color: rgba( 205, 0, 33, 1 ); // #cd0021
-$grey-twenty-percent: lighten(#000, 20%); // #cfcfcf
+$grey-twenty-percent: lighten(#000, 80%); // #cfcfcf
 $grey-forty-percent: rgba( 172, 172, 172, 1 ); // #acacac
 $grey-sixty-percent: rgba( 125, 125, 125, 1 ); // #7d7d7d
 $grey-seventyfive-percent: rgba( 85, 85, 85, 1 ); // #7d7d7d
@@ -58,10 +58,11 @@ $font-size-base: 14px;/* link blue #3366BB rgba(51,102,187,1)*/
 
 // Media queries breakpoints
 // Define the breakpoints at which your layout will change, adapting to different screen sizes.
+$min-xs-box-width: 348px;
+
 $screen-xs: 480px;
 $screen-xs-min: $screen-xs;
 $screen-phone: $screen-xs-min;
-
 $screen-sm: 768px;
 $screen-sm-min: $screen-sm;
 $screen-tablet: $screen-sm-min;
@@ -74,81 +75,10 @@ $screen-lg-desktop: $screen-lg-min;
 $screen-xs-max: ($screen-sm-min - 1);
 $screen-sm-max: ($screen-md-min - 1);
 $screen-md-max: ($screen-lg-min - 1);
-
-@media (max-width: $screen-xs-max) {
-    body {
-        font-size: 10px !important;
-        
-        .navbar-brand-font {
-            font-size: 200%;
-            line-height: 1.3125;
-        }
-        
-        .pitch {
-            font-size: 3em !important;
-        }
-        
-        #lobby
-            .rubric {
-                font-size: 150%;
-                text-align: center;
-            }
-        
-    }
-    
-}
-@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    body {
-        font-size: 12px !important;
-        
-        .pitch {
-            font-size: 4em !important;
-        }
-        
-        .navbar-brand-font {
-            font-size: 200%;
-            line-height: 1.125;
-        }
-        
-        .navbar-header {
-            height: 30px;
-        }
-    }
-}
-@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
-    body {
-        font-size: 14px !important;
-        
-        .pitch {
-            font-size: 6em !important;
-        }
-        
-        .navbar-brand-font {
-            font-size: 200%;
-        }
-
-    }
-}
-@media (min-width: $screen-lg-min) {
-    body {
-        font-size: 14px !important;
-        
-        .pitch {
-            font-size: 8em !important;
-        }
-        
-        .navbar-brand-font {
-            font-size: 235%;
-        }
-
-    }
-}
-
-
 // Grid
   // Padding between columns. Gets divided in half for the left and right.
 
-$gridColumns: 12; 
+$gridColumns: 16; 
 $gridGutterWidth: 10px;
   //Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint: $screen-sm-min; 
@@ -158,7 +88,7 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 
 // Navigation Bar and other links
 
-
+$navbar-height: 25px;
 $navbar-default-link-color: $blue-logo-color;
 
 
@@ -224,6 +154,89 @@ body {
   background-image: linear-gradient(to bottom, #EFEFEF 0%, #FFFFFF 100%);
 } 
   //end body
+
+
+@media (max-width: $screen-xs-max) {
+    body {
+        font-size: 12px !important;
+        min-width: $min-xs-box-width;
+        
+        h2 {
+            
+        }
+        
+        .navbar-brand-font {
+            font-size: 138.2%;
+            line-height: 1.5;
+        }
+        
+        .pitch {
+            font-size: 3em !important;
+        }
+        
+        #lobby
+            .rubric {
+                font-size: 150%;
+                text-align: center;
+            }
+            #headingOffering {
+                .rubric-lg {
+                    font-size: 1.5em !important;
+                }
+        }
+        
+    }
+    
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    body {
+        font-size: 12px !important;
+        
+        .pitch {
+            font-size: 4em !important;
+        }
+        
+        .navbar-brand-font {
+            font-size: 100%;
+            line-height: 1.125;
+        }
+        
+        .navbar-header {
+            max-height: 30px !important;
+        }
+    }
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    body {
+        font-size: 14px !important;
+        
+        .pitch {
+            font-size: 6em !important;
+        }
+        
+        .navbar-brand-font {
+            font-size: 125%;
+            line-height: 1.5;
+        }
+
+    }
+}
+@media (min-width: $screen-lg-min) {
+    body {
+        font-size: 14px !important;
+        
+        .pitch {
+            font-size: 8em !important;
+        }
+        
+        .navbar-brand-font {
+            font-size: 125%;
+            line-height: 1.5;
+        }
+
+    }
+}
+
   
   // Typography
   
@@ -262,7 +275,7 @@ body {
 
 // Panels
 
-.content-panel {
+    .content-panel {
       @include border-radius(0px);
       background: $white;
       padding: 6px;
@@ -286,6 +299,11 @@ body {
     max-height: 16%;
   }
   
+  img.image-xmd {
+    max-width:  50%;
+    max-height: auto;
+  }
+  
   img.image-md {
     max-width:  $golden-ratio-long;
     max-height: auto;
@@ -307,6 +325,18 @@ body {
     box-shadow: $shadow-hard;
     border-radius: 6px;
   }
+  
+  // Rows & Columns
+  
+   /*.row { 
+      display: table;
+    }
+    
+    [class*="col-"] {
+      float: none;
+      display: table-cell;
+      vertical-align: top;
+    }*/
   
   // Home Page Sections
   // Billboard
@@ -349,7 +379,6 @@ body {
   #fold {
     
     padding: 0;
-    font-size: 1.25em;
     
     
     
@@ -390,7 +419,7 @@ body {
       
       }
     }
-    // Home Page About Section
+  // Home Page About Section
   
 
   
@@ -494,6 +523,9 @@ body {
             }
             
           }
+          .epk-display-row {
+            border-bottom: 1px solid $grey-border-color;
+          }
           
           .rackmount {
             margin: auto 6px;
@@ -585,7 +617,23 @@ body {
   }
   
   // end #demo
-  
+  .socal-media-bar {
+    background: $grey-twenty-percent;
+    font-size: 2em;
+    margin: 12px -24px 12px -54px;
+    padding-left: 54px;
+    
+      ul {
+        list-style: none;
+        display: table-row;
+        
+        li {
+          display: table-cell;
+          padding-right: 16px;
+            
+        }
+      }
+  }
     // Forms
   
   .form-group {
@@ -613,20 +661,38 @@ body {
   
   // Buttons
 
-.btn-default {
-  background-color: rgba(255,255,255,1);
-  color: rgba(0,0,0,.9);
-  // border: $border-thin-line $blue-logo-color;
-  box-shadow: $shadow-soft;
-}
-.btn-basic {
-  background-color: rgba(255,255,255,1);
-  color: rgba(0,0,0,.9);
-  border: $border-thin-line $blue-logo-color;
-  box-shadow: $shadow-soft;
-}
-  .request-registration-code {
-  font-size: .8125em;
+    .btn-default {
+      background-color: rgba(255,255,255,1);
+      color: rgba(0,0,0,.9);
+      // border: $border-thin-line $blue-logo-color;
+      box-shadow: $shadow-soft;
+    }
+    .btn-basic {
+      background-color: rgba(255,255,255,1);
+      color: rgba(0,0,0,.9);
+      border: $border-thin-line $blue-logo-color;
+      box-shadow: $shadow-soft;
+    }
+      .request-registration-code {
+      font-size: .8125em;
+      }
+  
+  // Lists
+  
+    .downloads-list {
+        list-style: none;
+        border-bottom: 1px solid $grey-border-color;
+    
+        li {
+            display: inline-block;
+            margin: 0 4px;
+            padding: 0;
+        
+            &:after {
+                content: " |";
+            }
+        
+        }
   }
   
   // Dividers

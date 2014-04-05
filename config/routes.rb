@@ -1,5 +1,9 @@
 Entreuse::Application.routes.draw do
   
+  get "demos/index"
+  get "demos/deanorion"
+  get "demos/bartkresa"
+  get "demos/greenideahouse"
   root 'lobby#index'
     get 'home' => 'lobby#home'
     get 'demos' => 'lobby#demos'
