@@ -24,6 +24,8 @@ $grey-seventyfive-percent: rgba( 85, 85, 85, 1 ); // #7d7d7d
 $grey-border-color: rgba(199, 200, 202, 1);
 $white: rgba( 255, 255, 255, 1 ); // #ffffff
 $black: rgba( 0, 0, 0, 1 ); // #000000
+$blue-link: rgba ( 6, 69, 173, 1 ); // #0645AD
+$light-blue-link: rgba ( 51, 102, 187, 1 ); // #3366BB
 
 $shadow-hard: 1px 1px 0 $grey-forty-percent;
 $shadow-soft: 2px 2px 2px $grey-forty-percent;
@@ -50,7 +52,9 @@ $margin-lg: 32px;
 $brand-primary: $grey-seventyfive-percent;
 $border-radius-base: 6px;
 $body-bg: rgba( 44, 62, 88, 1 ); // #2c3e50
-$text-color: #262626;
+$text-color: $grey-entreuse;
+$link-color: #0645AD;
+$link-hover-color: darken($link-color, 15%);
 // basic typography
 $font-family-entreuse-brand: steinerregular, "helveticaneue-ultraligcond", Helvetica, sans-serif;
 $font-family-sans-serif: "Source Sans Pro" Arial, Helvetica, sans-serif;
@@ -253,6 +257,12 @@ body {
   .text-grey-light {
     color: $grey-forty-percent;
   }
+    
+  a:hover {
+    cursor: pointer !important;
+    text-decoration: none !important;
+  }
+  
   
     // Headings
     
@@ -382,8 +392,6 @@ body {
   #fold {
     
     padding: 0;
-    
-    
     
     #offering {
       
@@ -546,6 +554,10 @@ body {
   }
  
     .article-main {
+        
+        a:link {
+            color: blue;
+        }
         
         dl {
             margin-left: 2em;
@@ -811,3 +823,4 @@ body {
     
   }
  
+
