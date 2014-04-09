@@ -1,11 +1,9 @@
-              <h3 class="rubric">Book Summary</h3>
+              <h3 class="rubric"><a data-toggle="modal" data-target="#bookSummary">Book Summary</a></h3>
                 <div class="row">
                     <div class="article-image col-xsm-12 col-sm-5 col-md-5 col-lg-5 col-xlg-5">
-                      <%= image_tag "LTWAD_video_image1.png", :class => "img-center img-responsive", :title => "Image Video" %>
+                      <a data-toggle="modal" data-target="#bookSummary"><%= image_tag "LTWAD_video_image1.png", :class => "img-center img-responsive", :title => "Image Video" %></a>
                     </div>
                     <div class="article-shout col-xsm-12 col-sm-7 col-md-7 col-lg-7 col-xlg-7">
-                      <p class="rubric">What is About</p>
-                      <h3>Contributors</h3>
                       <p class="blurb">
                         <ul>
                           <li>Dean Orion  (Author)</li>
@@ -42,7 +40,7 @@
               <%= link_to 'TXT', '#'%>
             </li>
             <li>
-              <%= link_to 'RFT', '#'%>
+              <%= link_to 'RTF', '#'%>
             </li>
             <!--<li>
               Image: <%= link_to 'JPG', '#'%>

@@ -15,6 +15,8 @@ $blue-logo-color:  rgba( 0, 86, 132, 1 ); // #005684
 $green-logo-color: rgba( 40, 185, 154, 1 ); // #28b99a
 $green-darker-logo-color: rgba( 30, 132, 108, 1 ); // #1e846c
 $red-entreuse-color: rgba( 205, 0, 33, 1 ); // #cd0021
+$orange-gold-entreuse: rgba( 212, 160, 23, 1 ); // #D4A017
+$grey-entreuse: rgba( 120, 125, 128, 1 ); // #787d80
 $grey-twenty-percent: lighten(#000, 80%); // #cfcfcf
 $grey-forty-percent: rgba( 172, 172, 172, 1 ); // #acacac
 $grey-sixty-percent: rgba( 125, 125, 125, 1 ); // #7d7d7d
@@ -55,6 +57,7 @@ $font-family-sans-serif: "Source Sans Pro" Arial, Helvetica, sans-serif;
 $font-family-serif: Georgia, "Times New Roman", Times, serif;
 $font-family-monospace: "Lucida Console", Monaco, monospace;
 $font-size-base: 14px;/* link blue #3366BB rgba(51,102,187,1)*/
+// $fontawesome: ;
 
 // Media queries breakpoints
 // Define the breakpoints at which your layout will change, adapting to different screen sizes.
@@ -480,7 +483,7 @@ body {
   #demos {
     
     .epk {
-      padding: 18px 6px;
+      padding: 6px 6px;
       
       .panel {
         @include border-radius(0px);
@@ -493,12 +496,18 @@ body {
             border: 1px solid $grey-border-color;
           
           .shout-panel {
-            background-color: $grey-border-color;
+            background-color: $grey-entreuse;
             color: $white;
             display: block;
-            padding: 18px;
+            padding: 8px;
             margin: 0;
-            text-align: center;
+            text-align: left;
+          
+            h1 {
+                font-size: 1.5em;
+                padding: 0;
+                margin: 0;
+            }
           }
           
           .epk-locker-display {
@@ -535,6 +544,52 @@ body {
       }
     }
   }
+ 
+    .article-main {
+        
+        dl {
+            margin-left: 2em;
+            margin-right: 2em;
+            
+            dt {
+                line-height: 1.125;
+                padding-right: 2em;
+            }
+            dd {
+                margin: 1.625em;
+                padding-bottom: 1.625em;
+                padding-right: 2em;
+                border-bottom: 1px solid $grey-border-color;;
+            }
+            
+        }
+        
+        ul {
+            list-style: none;
+            
+            li {
+                
+            }
+        }
+        
+        ol {
+            list-style: decimal;
+            
+            li {
+                
+            }
+        }
+        
+        .citation-reviewer {
+            font-size: 1.125em;
+            font-weight: bold;
+            
+            & a:link {
+                color: $grey-entreuse;
+            }
+        }
+    }
+ 
   
   // end #demo
   
@@ -750,5 +805,9 @@ body {
   
   .panel-center {
     margin: 0 auto;
+  }
+  
+  .five-star {
+    
   }
  

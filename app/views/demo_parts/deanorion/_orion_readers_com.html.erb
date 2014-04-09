@@ -1,25 +1,24 @@
-              <h3 class="rubric">Readers Comments</h3>
+              <h3 class="rubric"><a data-toggle="modal" data-target="#amazonReviews">Amazon Reviews</a></h3>
                 <div>
                     <div class="article-shout">
-                      <p class="rubric">Reviewers Choice</p>
-                      <h3>4 out of 5</h3>
+                      <p class="five-stars">Rating: <%= image_tag "five-of-five.png", :class => "img-responsive", :title => "five stars of five stars rating" %></p>
                       <p class="blurb">
-                        livetowriteanotherdayCrafting a well-written story has always been a monumental task, even for the most talented of writers, and enduring the many harsh realities of doing it for a living can be equally painful.
+                        A smash with the readers, <em>Live To Write Another Day</em> is leading its category at Amazon. 
                       </p>
                     <!-- Button trigger modal -->
-                      <p class="text-right"><a data-toggle="modal" data-target="#bookReviews">
+                      <p class="text-right"><a data-toggle="modal" data-target="#amazonReviews">
                         more. . .
                       </a></p>
                     </div>  
                   </div>
 
 <!-- Modal -->
-<div class="modal fade" id="bookReviews" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="amazonReviews" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Book Summary</h4>
+        <h4 class="modal-title" id="myModalLabel">Amazon Reviews</h4>
       </div>
       <div class="modal-body">
         <div>
@@ -35,23 +34,79 @@
               <%= link_to 'TXT', '#'%>
             </li>
             <li>
-              <%= link_to 'RFT', '#'%>
+              <%= link_to 'RTF', '#'%>
             </li>
             <!--<li>
               Image: <%= link_to 'JPG', '#'%>
             </li>-->
           </ul>
         </div>
-        <h2>Book review: <em>Live To Write Another Day: A Survival Guide for Screenwriters and Creative Storytellers</em> by <strong>Dean Orion</strong> (Sky Father Media, 2013)</h2>
+        <article class="article-main">
+          <h1>Book Reviews</h1>
+          
+          <ol>
+            <li>
+              <p class="citation-reviewer">
+                March 6, 2013, By Alec Sokolow
+              </p>
+              <ul>
+                <li>Format: Kindle Edition</li>
+                <li class="five-stars">
+                    <p class="five-stars">Rating: <%= image_tag "five-of-five.png", :class => "img-responsive", :title => "five stars of five stars rating" %></p>
+                </li>
+              </ul>
+              <p class="lead">I truly loved this read.</p>
+              <p>This book surgically breaks down the myths and misconceptions of writing. Not only with advice on how to pragmatically structure a work of fiction, but with even more important advice on how to get through the entire writing process from the moment of conception, through the dark tunnels of creation, the vulnerability of receiving notes and the sense of emptiness that comes with the completion of the work.</p>
+              <p>It is both informative, personal and entertaining. And a very reassuring reminder that while writing is never easy, it doesn't have to be so tough.</p>
+              <p>I wish I had read this book when i was first starting out. It would have saved me years of confusion, anxiety and bar bills.</p>
+              <p>And perhaps most impressively, this book actually makes me want to get back to my writing.</p>
+            </li>
+            <li>
+              <p class="citation-reviewer">
+              March 15, 2013, By Sean Dickson
+              </p>
+              <ul>
+                <li>Format: Kindle Edition</li>
+                <li class="five-stars">
+                    <p class="five-stars">Rating: <%= image_tag "five-of-five.png", :class => "img-responsive", :title => "five stars of five stars rating" %></p>
+                </li>
+              </ul>
+              <p class="lead">If you have doubts about your writing process (or sanity) this is for you</p>
+              <p>I've been in some of the same trenches as Mr. Orion and can attest that he NAILS IT with this book. As much a self-help checklist and pep talk as it is a reality check about writing for the entertainment industry. If you've ever doubted your writing process... or feel like you need some new routines to shake up your exercise regimen, get this book. You will refer back to it often. Of all the How-To guides I have (and will) read, I have a feeling this one will remain in my Top 5.</p>
+              <p>More importantly, it gives validation to those who are compelled to write. For us, it isn't a choice, it is a necessity.</p>      
+            </li>
+            <li>
+              <p class="citation-reviewer">
+                June 25, 2013, By Dominic DiFrancesco
+              </p>
+              <ul>
+                <li>Format: Kindle Edition</li>
+                <li class="five-stars">
+                    <p class="five-stars">Rating: <%= image_tag "five-of-five.png", :class => "img-responsive", :title => "five stars of five stars rating" %></p>
+                </li>
+              </ul>
+              <p class="lead">Excellent and Informative</p>
+              <p>Dean Orion's book was a terrific read with lots of helpful information for aspiring writers. I for one am using many of the tips that Dean introduced to assist me in the writing of my first novel. This an excellent book, an easy and enjoyable read and I highly recommend it.
+        </p>
+            </li>
+            <li>
+              <p class="citation-reviewer">
+                October 21, 2013, By Stephanie Daniels
+              </p>
+              <ul>
+                <li>Format: Kindle Edition</li>
+                <li class="five-stars">
+                    <p class="five-stars">Rating: <%= image_tag "five-of-five.png", :class => "img-responsive", :title => "five stars of five stars rating" %></p>
+                </li>
+              </ul>
+              <p class="lead">I will survive--thanks to this book</p>
+              <p>I appreciated the easy-to-read, conversational tone of this book. Mr. Orion immediately dispels the myth of writer's block and encourages the process of procrastination, all while inviting the writer into his creative process.</p>
+              <p>The chapters on note-giving and note-taking (constructive criticism) are invaluable! The most important piece of advice he gives? Once my story has been written, it is time to let it go. I think the explanation he gives about this is probably the most important any writer can read. The entire book felt like someone who gets me, and of course he does, because like him, I have the writer's gene, so essentially, it is like we are family. Wonderfully sage and encouraging but realistic advice. I highly recommend this book for writers in any stage of their journey.</p>
+            </li>
+          </ol>
+          
+        </article>
         
-        <p>Crafting a well-written story has always been a monumental task, even for the most talented of writers, and enduring the many harsh realities of doing it for a living can be equally painful. Using a mix of practical techniques and common sense, "Live To Write Another Day, A Survival Guide for Screenwriters and Creative Storytellers," demonstrates how writers can solve creative problems in their work and at the same time reduce the stress and anxiety that often comes along with the job.</p>
-        
-        <p>The author, Dean Orion, draws on his more than 20 years as a "writer in the trenches" of the entertainment industry to explain how he has created original stories for theater, television, videogames and theme park experiences. The book features a step-by-step walk thru of the process of creating original stories, both "on spec" and "for hire," as well as helpful hands-on checklists at the end of each chapter, and an intriguing afterword about the future of storytelling.</p>
-        <p>Written in a conversational style, "Live To Write Another Day, A Survival Guide for Screenwriters and Creative Storytellers," is both a tell-it-like-it-is approach to demystifying the nuts-and-bolts mechanics of storytelling and an inspirational, heartfelt primer on what it takes to be a professional creative writer.</p>
-        <p>While this isn't a really long book, it's a good read. Author and screenwriter Dean Orion shares the insights he's gathered from his many years of writing. Whether you're struggling with writer's block or procrastination, he gives you ideas on how to get back on track.</p>
-        <p>Using many anecdotes from his own life, the reader (or, rather, aspiring writer) gets a good idea of what working as a writer is actually like, along with many good examples of what you should avoid - and why - and also the sort of things you are better off knowing.</p>
-        <p>The tone of the book is friendly and oftentimes amusing, and I found it very easy to read. It also gave me lots of inspiration, so it's definitely a book I would recommend to anyone who wants to be a writer - whether it's for professional purposes or just for a love of the craft.</p>
-        <p>4 out of 5 writing spaces.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
