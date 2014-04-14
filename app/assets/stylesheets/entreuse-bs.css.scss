@@ -17,6 +17,7 @@ $green-darker-logo-color: rgba( 30, 132, 108, 1 ); // #1e846c
 $red-entreuse-color: rgba( 205, 0, 33, 1 ); // #cd0021
 $orange-gold-entreuse: rgba( 212, 160, 23, 1 ); // #D4A017
 $grey-entreuse: rgba( 120, 125, 128, 1 ); // #787d80
+$grey-entreuse-light: lighten($grey-entreuse, 50%);
 $grey-twenty-percent: lighten(#000, 80%); // #cfcfcf
 $grey-forty-percent: rgba( 172, 172, 172, 1 ); // #acacac
 $grey-sixty-percent: rgba( 125, 125, 125, 1 ); // #7d7d7d
@@ -304,22 +305,27 @@ body {
   // Images
   img.image-sm {
     max-width:  25%;
-    max-height: 25%;
+    height: auto;
   }
   
   img.image-xsm {
     max-width:  16%;
-    max-height: 16%;
+    height: auto;
   }
   
   img.image-xmd {
     max-width:  50%;
-    max-height: auto;
+    height: auto;
+  }
+  
+  img.image-gmd {
+    max-width:  $golden-ratio-short;
+    height: auto;
   }
   
   img.image-md {
     max-width:  $golden-ratio-long;
-    max-height: auto;
+    height: auto;
   }
   
   img.img-center {
@@ -540,13 +546,17 @@ body {
             }
             
           }
-          .epk-display-row {
+          .row-epk-display {
             border-bottom: 1px solid $grey-border-color;
+            
+            &.row-last-part {
+            border-bottom: none;
+            }
           }
           
           .rackmount {
-            margin: auto 6px;
-            padding: 0 18px;
+            margin: auto 0px auto 0px;
+            padding: 0 18px 0 0;
           }
         }
       }
@@ -571,7 +581,7 @@ body {
                 margin: 1.625em;
                 padding-bottom: 1.625em;
                 padding-right: 2em;
-                border-bottom: 1px solid $grey-border-color;;
+                border-bottom: 1px solid $grey-border-color;
             }
             
         }
@@ -600,8 +610,20 @@ body {
                 color: $grey-entreuse;
             }
         }
+        
+        
     }
- 
+    address.contact-block {
+        display: block;
+        @include border-radius(4px);
+        background: $grey-entreuse-light;
+        font-size: 1.125em;
+        padding: 12px;
+        margin: 12px;
+        border: 1px solid $grey-border-color;
+        
+        } 
+
   
   // end #demo
   
@@ -687,15 +709,15 @@ body {
   .socal-media-bar {
     background: $grey-twenty-percent;
     font-size: 2em;
-    margin: 12px -24px 12px -54px;
-    padding-left: 54px;
+    margin: 12px -20px 12px -30px;
+    padding-left: 0px;
     
       ul {
         list-style: none;
-        display: table-row;
+        display: block;
         
         li {
-          display: table-cell;
+          display: inline-block;
           padding-right: 16px;
             
         }

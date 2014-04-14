@@ -1,9 +1,10 @@
 Entreuse::Application.routes.draw do
   
-  get "demos/index"
-  get "demos/deanorion"
-  get "demos/bartkresa"
-  get "demos/greenideahouse"
+  get 'demosIndex' => 'demos#index'
+  get 'deanOrionDefaultDemo' => 'demos#deanorion'
+  get 'deanOrionPressReleaseDemo' => 'demos#deanorion_pr'
+  get 'bartKresaDefaultDemo' => 'demos#bartkresa'
+  get 'greenIdeaHouseDefaultDemo' => 'demos#greenideahouse'
   root 'lobby#index'
     get 'home' => 'lobby#home'
     get 'demos' => 'lobby#demos'

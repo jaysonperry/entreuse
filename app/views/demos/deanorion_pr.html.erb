@@ -11,7 +11,7 @@
             <article class="epk-locker-display">
               <div class="epk-heading">
                 <div class="row">
-                  <%= render ('demos/demo_parts/deanorion/ltwad_cover') %>
+                  <%= render ('demos/demo_parts/deanorion/ltwad_press_release_01') %>
                 </div>
               </div>
               <div class="row row-epk-display">
@@ -50,9 +50,17 @@
           
           <div class="col-xsm-12 col-sm-12 col-md-3 col-lg-3 col-xlg-3">
             <section class="rackmount">
-              <div id="welcome">
-                <h3 class="rubric">Welcome</h3>
-              </div>
+              
+              <address class="contact-block pull-right">
+                <p>Contact: Dean Orion</p>
+                <p>
+                       <%= mail_to "dean@skyfathermedia.com" do %>
+                  dean@skyfathermedia.com
+                       <% end %></p>
+                <p>Los Angeles, CA</p> 
+                <p>Ph: 310-864-9531</p>
+              </address>
+              
               <%= link_to 'Press Release (April, 2014)', deanOrionPressReleaseDemo_path %>
               <div class="socal-media-bar">
                 <%= render ('demos/demo_parts/deanorion/orion_social_media') %>

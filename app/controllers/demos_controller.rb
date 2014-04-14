@@ -6,6 +6,9 @@ class DemosController < ApplicationController
   def deanorion
   end
 
+  def deanorion_pr
+  end
+
   def bartkresa
   end
 
