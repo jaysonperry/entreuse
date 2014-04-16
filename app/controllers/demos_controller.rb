@@ -14,4 +14,8 @@ class DemosController < ApplicationController
 
   def greenideahouse
   end
+
+  def oss
+  end
+  
 end

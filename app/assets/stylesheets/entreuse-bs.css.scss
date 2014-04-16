@@ -2,11 +2,12 @@
 
 // Entreuse Application Custom Styling based on Bootstrap-sass
 //
-
-@import "font-face";
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic); // 'Source Sans Pro'
+@import url(http://fonts.googleapis.com/css?family=Tenor+Sans); // 'Tenor Sans'
+@import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600&subset=latin,latin-ext); // 'Dosis'
+@import url(http://fonts.googleapis.com/css?family=Federo); // 'Federo'
 
 @import "entreuse_simple_form";
-
 @import "bootstrap_dropdowns";
 // Custom SASS CSS
 // Custom Site SASS Variables
@@ -57,8 +58,8 @@ $text-color: $grey-entreuse;
 $link-color: #0645AD;
 $link-hover-color: darken($link-color, 15%);
 // basic typography
-$font-family-entreuse-brand: steinerregular, "helveticaneue-ultraligcond", Helvetica, sans-serif;
-$font-family-sans-serif: "Source Sans Pro" Arial, Helvetica, sans-serif;
+$font-family-entreuse-brand: 'Federo', Helvetica, sans-serif;
+$font-family-sans-serif: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 $font-family-serif: Georgia, "Times New Roman", Times, serif;
 $font-family-monospace: "Lucida Console", Monaco, monospace;
 $font-size-base: 14px;/* link blue #3366BB rgba(51,102,187,1)*/
@@ -98,7 +99,7 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 
 $navbar-height: 25px;
 $navbar-default-link-color: $blue-logo-color;
-
+$navbar-margin-bottom: $navbar-height + 14px;
 
 
 // Buttons
@@ -245,11 +246,15 @@ body {
     }
 }
 
+    .navbar {
+        margin-bottom: $navbar-margin-bottom !important;
+    }
   
   // Typography
   
   .navbar-brand-font {
     font-family: $font-family-entreuse-brand;
+    font-weight: 200;
     letter-spacing: .0625em;
     font-size: 34px;
     line-height: 1;
@@ -438,8 +443,6 @@ body {
     }
   // Home Page About Section
   
-
-  
     #about {
       padding: 1.5em;
     
@@ -504,6 +507,34 @@ body {
         background: $white;
         padding: 6px;
         margin: 0;
+        .row {
+            
+            .row-padding-top {
+            }
+            
+            &.row-epk-display {
+                border-bottom: 1px solid $grey-border-color;
+                padding-top: 18px;
+            }
+            
+            
+            &.row-last-part {
+                border-bottom: none;
+            }
+        }
+          
+        .epk-alternate-list {
+            border-bottom: 1px solid $grey-border-color;
+            
+            h4 {
+                
+            }
+            
+            ul {
+                list-style: none;
+            }
+            
+        }
         
         .epk-content {
             margin: 0;
@@ -526,15 +557,13 @@ body {
           
           .epk-locker-display {
             margin: 0;
-            padding: 0 18px;
+            padding: 0 14px;
             border-right: 1px solid $grey-border-color;
-            
-            
           }
           
           .epk-heading {
-            margin: 0 -18px;
-            padding: 18px;
+            margin: 0 -14px;
+            padding: 14px;
             border-bottom: 1px solid $grey-border-color;
             
             h2 {
@@ -546,16 +575,9 @@ body {
             }
             
           }
-          .row-epk-display {
-            border-bottom: 1px solid $grey-border-color;
-            
-            &.row-last-part {
-            border-bottom: none;
-            }
-          }
           
           .rackmount {
-            margin: auto 0px auto 0px;
+            margin: 0 0px 0 0px;
             padding: 0 18px 0 0;
           }
         }
@@ -613,16 +635,17 @@ body {
         
         
     }
-    address.contact-block {
-        display: block;
-        @include border-radius(4px);
-        background: $grey-entreuse-light;
-        font-size: 1.125em;
-        padding: 12px;
-        margin: 12px;
-        border: 1px solid $grey-border-color;
-        
-        } 
+    
+address.contact-block {
+    display: block;
+    @include border-radius(4px);
+    background: $grey-entreuse-light;
+    font-size: 1.125em;
+    padding: 12px;
+    margin: 12px;
+    border: 1px solid $grey-border-color;
+    
+    } 
 
   
   // end #demo
@@ -708,7 +731,7 @@ body {
   // end #demo
   .socal-media-bar {
     background: $grey-twenty-percent;
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 12px -20px 12px -30px;
     padding-left: 0px;
     
@@ -813,7 +836,10 @@ body {
     display: block;
     margin: 1em auto;
   }
-
+  .border-bottom-thin-full {
+    border-bottom: $border-thin-line $grey-border-color;
+    max-width: 100%;
+  }
 // Navigation & Link Default Resets
   // Nav-bar
   .navbar {

@@ -5,6 +5,7 @@ Entreuse::Application.routes.draw do
   get 'deanOrionPressReleaseDemo' => 'demos#deanorion_pr'
   get 'bartKresaDefaultDemo' => 'demos#bartkresa'
   get 'greenIdeaHouseDefaultDemo' => 'demos#greenideahouse'
+  get 'ossDefaultDemo' => 'demos#oss'
   root 'lobby#index'
     get 'home' => 'lobby#home'
     get 'demos' => 'lobby#demos'

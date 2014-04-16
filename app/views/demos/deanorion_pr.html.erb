@@ -3,7 +3,7 @@
     <div class="panel">
       <div class="epk-content">
         <div id="shout" class="panel shout-panel">
-          <h1>DEMO - Default Media Kit</h1>
+          <h1>Press Release with Media Kit</h1>
         </div>
         <!-- begin main epk content -->
         <div class="row">
@@ -51,24 +51,12 @@
           <div class="col-xsm-12 col-sm-12 col-md-3 col-lg-3 col-xlg-3">
             <section class="rackmount">
               
-              <address class="contact-block pull-right">
-                <p>Contact: Dean Orion</p>
-                <p>
-                       <%= mail_to "dean@skyfathermedia.com" do %>
-                  dean@skyfathermedia.com
-                       <% end %></p>
-                <p>Los Angeles, CA</p> 
-                <p>Ph: 310-864-9531</p>
-              </address>
-              
-              <%= link_to 'Press Release (April, 2014)', deanOrionPressReleaseDemo_path %>
-              <div class="socal-media-bar">
                 <%= render ('demos/demo_parts/deanorion/orion_social_media') %>
-              </div>
-              <div class="row-epk-display">
+              
+              <div class="row-epk-display border-bottom-thin-full">
                 <%= render ('demos/demo_parts/deanorion/orion_bio') %>
               </div>
-              <div class="row-epk-display">
+              <div class="row-epk-display border-bottom-thin-full">
                 <%= render ('demos/demo_parts/deanorion/orion_awards') %>
               </div>
             </section><!-- end .rackmount -->
